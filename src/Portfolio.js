@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaCode, FaLock, FaChartBar, FaMobileAlt, FaShoppingCart } from "react-icons/fa";
-import { Typewriter } from 'react-simple-typewriter';
+import Typewriter from 'react-typewriter-effect';
 
 export default function Portfolio() {
   const audioRef = useRef(null);
@@ -28,15 +28,17 @@ export default function Portfolio() {
 
       <section className="p-10 text-center bg-gradient-to-b from-black via-gray-900 to-black">
         <h2 className="text-4xl font-bold mb-4 text-green-400">
-          <Typewriter
-            words={["Transformando Dados e Códigos em Soluções Inteligentes"]}
-            loop={false}
-            cursor
-            cursorStyle="_"
-            typeSpeed={60}
-            deleteSpeed={0}
-            delaySpeed={1000}
-          />
+  <Typewriter
+    textStyle={{ color: '#00ff00', fontWeight: 'bold', fontSize: '2rem' }}
+    startDelay={100}
+    cursorColor="#00ff00"
+    multiText={[
+      'Transformando Dados e Códigos em Soluções Inteligentes',
+    ]}
+    multiTextDelay={1000}
+    typeSpeed={60}
+  />
+
         </h2>
         <button onClick={() => setMuted(!muted)} className="text-sm text-gray-400 hover:text-white mt-2">
           {muted ? "Ativar som de digitação" : "Silenciar som de digitação"}
